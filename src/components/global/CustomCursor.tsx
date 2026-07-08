@@ -7,7 +7,7 @@ export default function CustomCursor() {
   const cursorDot = useRef<HTMLDivElement>(null);
   const cursorRing = useRef<HTMLDivElement>(null);
   const cursorText = useRef<HTMLSpanElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | undefined>(undefined);
   
   const cursorGlow = useRef<HTMLDivElement>(null);
 

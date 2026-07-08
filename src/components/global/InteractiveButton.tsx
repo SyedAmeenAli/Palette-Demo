@@ -5,7 +5,12 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "admin";
 
-interface InteractiveButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type NativeButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration" | "onDrag" | "onDragStart" | "onDragEnd"
+>;
+
+interface InteractiveButtonProps extends NativeButtonProps {
   variant?: ButtonVariant;
   isLoading?: boolean;
   leftIcon?: React.ReactNode;

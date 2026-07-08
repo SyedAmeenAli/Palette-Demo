@@ -16,7 +16,7 @@ export default function Carousel3D({ products }: { products: Product[] }) {
   
   const rotationRef = useRef(0);
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | undefined>(undefined);
   const startX = useRef(0);
   const currentRot = useRef(0);
   const containerRef = useRef<HTMLElement>(null);
